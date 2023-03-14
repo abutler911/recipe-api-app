@@ -64,8 +64,9 @@ function mealRecipeModal(meal) {
   <h2 class="recipe-title">${meal.strMeal}</h2>
             <p class="recipe-category">${meal.strCategory}</p>
             <div class="recipe-instruct">
-              <h3>Instructions: </h3>
-              <p>${meal.strInstructions}</p>
+              <h3>Recipe: </h3>
+              <p>${meal.strInstructions.split("Step")}</p>
+              <br>
               
             </div>
             <div class="recipe-meal-img">
