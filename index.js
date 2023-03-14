@@ -2,7 +2,7 @@ const searchBtn = document.getElementById("search-btn");
 const mealList = document.getElementById("meal");
 const mealDetailsContent = document.querySelector(".meal-details-content");
 const recipeCloseBtn = document.getElementById("recipe-close-btn");
-
+const title = document.querySelector(".title");
 //event listeners
 
 searchBtn.addEventListener("click", getMealList);
@@ -22,6 +22,7 @@ function getMealList() {
       if (data.meals) {
         data.meals.forEach((meal) => {
           html += `
+          
             <div class="meal-item" data-id="${meal.idMeal}">
               <div class="meal-img">
                 <img
@@ -64,7 +65,7 @@ function mealRecipeModal(meal) {
   <h2 class="recipe-title">${meal.strMeal}</h2>
             <p class="recipe-category">${meal.strCategory}</p>
             <div class="recipe-instruct">
-              <h3>Recipe: </h3>
+              <h3>How To Make</h3>
               <p>${meal.strInstructions.split("Step")}</p>
               <br>
               
